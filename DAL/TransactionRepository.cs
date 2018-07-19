@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using StoneChallange.Models;
+using StoneApi.Models;
 
-namespace StoneChallange.DAL{
+namespace StoneApi.DAL{
     public class TransactionRepository : ITransactionRepository, IDisposable
     {
         public TransacaoContext Context { get; set; }

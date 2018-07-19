@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using StoneChallange.Models;
+using StoneApi.Models;
 
-namespace StoneChallange.DAL
+namespace StoneApi.DAL
 {
     public interface ITransactionRepository : IDisposable
     {

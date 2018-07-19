@@ -11,9 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
-using StoneChallange.DAL;
+using StoneApi.DAL;
 
-namespace core_webapi
+namespace StoneApi
 {
     public class Startup
     {

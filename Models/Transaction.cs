@@ -1,4 +1,4 @@
-namespace StoneChallange.Models {
+namespace StoneApi.Models {
     public class Transaction{
         public int TransactionId { get; set; }
         public double MerchantCnpj { get; set; }

@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using StoneChallange.DAL;
-using StoneChallange.Models;
+using StoneApi.DAL;
+using StoneApi.Models;
 
-namespace StoneChallange.DAL {
+namespace StoneApi.DAL {
     public class TransacaoContext : DbContext
     {
         public DbSet<Transaction> Transactions { get; set; }

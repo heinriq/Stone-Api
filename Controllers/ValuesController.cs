@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using StoneChallange.DAL;
-using StoneChallange.Models;
+using StoneApi.DAL;
+using StoneApi.Models;
 
-namespace core_webapi.Controllers
+namespace StoneApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

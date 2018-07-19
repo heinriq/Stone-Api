@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using StoneApi.DAL;
 using StoneApi.Models;
@@ -20,37 +17,27 @@ namespace StoneApi.Controllers
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<Transaction> Get()
-        {
-            return repository.GetTransactions();
-        }
+        public IEnumerable<Transaction> Get() 
+            => repository.GetTransactions();
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public Transaction Get(int id)
-        {
-            return repository.GetTransactionsById(id);
-        }
+        public Transaction Get(int id) 
+            => repository.GetTransactionsById(id);
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] Transaction value)
-        {
-            repository.InsertTransaction(value);
-        }
+        public void Post([FromBody] Transaction value) 
+            => repository.InsertTransaction(value);
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Transaction value)
-        {
-            repository.UpdateTransaction(value);
-        }
+        public void Put(int id, [FromBody] Transaction value) 
+            => repository.UpdateTransaction(value);
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-            repository.DeleteTransaction(id);
-        }
+        public void Delete(int id) 
+            => repository.DeleteTransaction(id);
     }
 }

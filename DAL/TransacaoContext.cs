@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using StoneApi.DAL;
 using StoneApi.Models;
 
-namespace StoneApi.DAL {
+namespace StoneApi.DAL
+{
     public class TransacaoContext : DbContext
     {
         public DbSet<Transaction> Transactions { get; set; }

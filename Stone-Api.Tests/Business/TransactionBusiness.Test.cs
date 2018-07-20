@@ -25,19 +25,21 @@ namespace StoneApi.Tests
             => Assert.True(Business.GetById(id).MerchantCnpj == cnpj);
 
         
-        [Fact(DisplayName = "Busca filtrada pelo cartão de crédito, valores recebidos não podem estar na lista dos cartões abaixo")]
-        public void GetWithFilter(){
-            var wrongList = new List<string>
-            { "Alelo", "Alelo Alimentacao", "Alelo Refeicao", "Credz", "Electron", "Elo Credito", "Hipercard", "Mastercard", 
-            "Sodexo Alimentacao", "Sodexo Refeicao", "Visa"};
-            
-            var responseList = 
-            Business
-            .GetWithQueryParameters( brand: new List<string>{ "Maestro", "Elo Debito"}.ToArray())
-            .Select(o => o.CardBrandName);
+        [Theory(DisplayName = "Busca filtrada pelo cartão de crédito, valores recebidos não podem estar na lista dos cartões abaixo")]
+        [InlineData("Maestro, Elo Debito")]
+        [InlineData("Alelo Alimentacao, Alelo Refeicao")]
+        [InlineData("Credz")]
+        [InlineData("Electron")]
+        [InlineData("Elo Credito")]
+        [InlineData("Hipercard")]
+        [InlineData("Mastercard, Sodexo Alimentacao")]
+        [InlineData("Visa,Sodexo Refeicao")]
+        public void GetWithFilter(string brands){            
+            var brandList = brands.Split(',');
+            var responseList = Business.GetWithQueryParameters( brand: brandList.ToArray());
             
             foreach(var responseItem in responseList)
-                    Assert.True(!wrongList.Contains(responseItem));        
+                    Assert.True(brandList.Any(o => o == responseItem.CardBrandName), $"Bandeira recebida: {responseItem.CardBrandName} - Bandeiras esperasas: {brands}");        
         }
 
         [Theory(DisplayName = "Filtros com data incial e final devendo retornar apenas o range entre elas")]

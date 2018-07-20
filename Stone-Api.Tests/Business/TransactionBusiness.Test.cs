@@ -89,7 +89,7 @@ namespace StoneApi.Tests
                 endDate: endDate
             );
 
-            Assert.True(listOfRows.Count() == 0 , $"a lista deveria sestar vazia, mas ela tem: {listOfRows.Count()} registros");
+            Assert.True(listOfRows.Count() == 0 , $"a lista deveria estar vazia, mas ela tem: {listOfRows.Count()} registros");
         }
 
     }

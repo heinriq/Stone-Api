@@ -26,7 +26,7 @@ localhost:5001/api/transactions/1
 ```    
 Consumo padrão para buscar o item por query:    
 ```     
-localhost:5001/api/transactions/query?startDate=2018-03-01&endDate=2018-03-30&cnpj=12345678000987,10101010000101&acquirer=Cielo,Redecard,Stone&brandElo Debito,Visa,Maestro 
+localhost:5001/api/transactions/query?startDate=2018-03-01&endDate=2018-03-30&cnpj=12345678000987,10101010000101&acquirer=Cielo,Redecard,Stone&brand=Elo Debito,Visa,Maestro 
 ```     
 
 ### Para executar os testes

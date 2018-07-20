@@ -31,7 +31,9 @@ localhost:5001/api/transactions/query?startDate=2018-03-01&endDate=2018-03-30&cn
 
 ### Para executar os testes
 Vá até a pasta Stone-Api.Tests e execute o comando  
-```bash dotnet test ```
+```bash 
+dotnet test 
+```
 
 ### O formato de resposta devolvido pela API deverá ser semelhante ao abaixo
 

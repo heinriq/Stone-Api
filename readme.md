@@ -16,15 +16,15 @@ O seu desafio será implementar uma API Restful que seja capaz gerar relatórios
 
 ### O Consumo da api deve ser feito da seguinte forma
 Consumo padrao para buscar todos os itens:  
-``` localhost:5001/api/transactions```
-Consumo padrão para buscar o item pelo id:  
-``` localhost:5001/api/transactions/1```
-Consumo padrão para buscar o item por query:  
-``` localhost:5001/api/transactions/query?startDate=2018-03-01&endDate=2018-03-30&cnpj=12345678000987,10101010000101&acquirer=Cielo,Redecard,Stone&brandElo Debito,Visa,Maestro ```
+``` localhost:5001/api/transactions```  
+Consumo padrão para buscar o item pelo id:    
+``` localhost:5001/api/transactions/1```  
+Consumo padrão para buscar o item por query:    
+``` localhost:5001/api/transactions/query?startDate=2018-03-01&endDate=2018-03-30&cnpj=12345678000987,10101010000101&acquirer=Cielo,Redecard,Stone&brandElo Debito,Visa,Maestro ```  
 
 ### Para executar os testes
 Vá até a pasta Stone-Api.Tests e execute o comando  
-``` shell dotnet test ```
+``` dotnet test ```
 
 ### O formato de resposta devolvido pela API deverá ser semelhante ao abaixo
 

@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using StoneApi.DAL;
+using StoneApi.Business;
 
 namespace StoneApi
 {
@@ -29,6 +30,7 @@ namespace StoneApi
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddTransient<ITransactionRepository, TransactionRepository>();
+            services.AddTransient<ITransactionBusiness, TransactionBusiness>(); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

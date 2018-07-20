@@ -8,9 +8,9 @@ using StoneApi.Models;
 namespace StoneApi.DAL{
     public class TransactionRepository : ITransactionRepository, IDisposable
     {
-        public TransacaoContext Context { get; set; }
+        public TransactionContext Context { get; set; }
         bool Disposed { get; set; }
-        public TransactionRepository(TransacaoContext context)
+        public TransactionRepository(TransactionContext context)
         {
             Context = context;
         }

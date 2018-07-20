@@ -22,7 +22,7 @@ namespace StoneApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddEntityFrameworkSqlServer()
-                .AddDbContext<TransacaoContext>(
+                .AddDbContext<TransactionContext>(
                     options => options.UseSqlServer(
                         Configuration.GetConnectionString("DevContext")
                     )

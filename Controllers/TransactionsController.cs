@@ -13,7 +13,7 @@ namespace StoneApi.Controllers
     [ApiController]
     public class TransactionsController : ControllerBase
     {
-        ITransactionBusiness Business { get; }
+        ITransactionBusiness Business { get; }        
         public TransactionsController(ITransactionRepository repository, ITransactionBusiness business) 
             => Business = business;
 

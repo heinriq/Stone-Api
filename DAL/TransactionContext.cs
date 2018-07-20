@@ -3,10 +3,10 @@ using StoneApi.Models;
 
 namespace StoneApi.DAL
 {
-    public class TransacaoContext : DbContext
+    public class TransactionContext : DbContext
     {
         public DbSet<Transaction> Transactions { get; set; }
-        public TransacaoContext(DbContextOptions<TransacaoContext> options) : base(options)
+        public TransactionContext(DbContextOptions<TransactionContext> options) : base(options)
         {    
         }
 

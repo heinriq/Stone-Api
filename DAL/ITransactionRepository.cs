@@ -6,11 +6,12 @@ namespace StoneApi.DAL
 {
     public interface ITransactionRepository : IDisposable
     {
-        IEnumerable<Transaction> GetTransactions();
-        Transaction GetTransactionsById(int transactionId);
-        void InsertTransaction(Transaction transacao);
-        void DeleteTransaction(int transactionId);
-        void UpdateTransaction(Transaction transacao);
+        IEnumerable<Transaction> Get();
+        IEnumerable<Transaction> Get(Func<Transaction, bool> func);
+        Transaction GetById(int transactionId);
+        void Insert(Transaction transacao);
+        void Delete(int transactionId);
+        void Update(Transaction transacao);
         void Save();
     }
 }
